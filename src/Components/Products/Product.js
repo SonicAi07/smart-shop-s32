@@ -24,7 +24,6 @@ function Product(props) {
                 Axios.post('https://wild-pear-cocoon-wig.cyclic.app/ss/get-cart-items', {
                     Id: user[0]._id
                 }).then((result) => {
-                    console.log(result.data)
                     dispatch(loadCart(result.data.CartItems))
                 })
             }
