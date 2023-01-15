@@ -24,7 +24,7 @@ function OrdersScreen() {
         return `
         <div style="border:1px solid black;width : 380px;background: #293243;padding: 10px; border-radius: 5px;">
         <div style="text-align: center;">
-            <img src="https://wild-pear-cocoon-wig.cyclic.app//Images/logo.png"
+            <img src="https://wild-pear-cocoon-wig.cyclic.app/Images/logo.png"
                 alt="logo" />
         </div>
         <div style="color: #fff;padding: 10px;">
@@ -48,13 +48,13 @@ function OrdersScreen() {
     useEffect(() => {
 
         if (loading === true) {
-            Axios.post('https://wild-pear-cocoon-wig.cyclic.app//ss/post-orders', {
+            Axios.post('https://wild-pear-cocoon-wig.cyclic.app/ss/post-orders', {
                 ProductId: location.state.productId,
                 UserId: userData[0]._id,
                 Address: location.state.address
             }).then((res) => {
                 if (res.data.isSuccess) {
-                    Axios.post('https://wild-pear-cocoon-wig.cyclic.app//mail/send-mail-html', {
+                    Axios.post('https://wild-pear-cocoon-wig.cyclic.app/mail/send-mail-html', {
                         toMail: userData[0].email,
                         toSubject: "Smart Shop - Order Details",
                         toMessage: MESSAGE(userData[0].username, location.state.productName, location.state.productPrice, location.state.address, location.state.paymentType)
@@ -65,18 +65,18 @@ function OrdersScreen() {
                         }
                     })
                     if (location.state.goBack === 'cart') {
-                        Axios.post('https://wild-pear-cocoon-wig.cyclic.app//ss/remove-cart-item', {
+                        Axios.post('https://wild-pear-cocoon-wig.cyclic.app/ss/remove-cart-item', {
                             CartId: location.state.cartId
                         })
                     }
 
                     setTimeout(() => {
-                        Axios.post('https://wild-pear-cocoon-wig.cyclic.app//ss/get-cart-items', {
+                        Axios.post('https://wild-pear-cocoon-wig.cyclic.app/ss/get-cart-items', {
                             Id: userData[0]._id
                         }).then((cartData) => {
                             dispatch(loadCart(cartData.data.CartItems))
                         })
-                        Axios.post('https://wild-pear-cocoon-wig.cyclic.app//ss//get-orders', {
+                        Axios.post('https://wild-pear-cocoon-wig.cyclic.app/ss//get-orders', {
                             Id: userData[0]._id
                         }).then((ordersResult) => {
                             dispatch(loadorders(ordersResult.data.Orders))

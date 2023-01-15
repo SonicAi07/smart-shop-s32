@@ -27,7 +27,7 @@ function Header() {
 
     const handleLogout = () => {
 
-        Axios.post('https://wild-pear-cocoon-wig.cyclic.app//ss/logout').then((res) => {
+        Axios.post('https://wild-pear-cocoon-wig.cyclic.app/ss/logout').then((res) => {
             if (res.data.isSuccess) {
                 alert(res.data.message)
                 dispatch(logout(null))

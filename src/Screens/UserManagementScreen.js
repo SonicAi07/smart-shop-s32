@@ -14,13 +14,13 @@ function UserManagementScreen() {
 
     useEffect(() => {
         isEdit ?
-            Axios.get('https://wild-pear-cocoon-wig.cyclic.app//ss/get-users').then((res) => {
+            Axios.get('https://wild-pear-cocoon-wig.cyclic.app/ss/get-users').then((res) => {
                 if (res.data.isSuccess) {
                     setUsers(res.data.UsersData)
                 }
             })
             :
-            Axios.get('https://wild-pear-cocoon-wig.cyclic.app//ss/get-users').then((res) => {
+            Axios.get('https://wild-pear-cocoon-wig.cyclic.app/ss/get-users').then((res) => {
                 if (res.data.isSuccess) {
                     setUsers(res.data.UsersData)
                 }
@@ -29,7 +29,7 @@ function UserManagementScreen() {
 
     useEffect(() => {
         if (isDeleted) {
-            Axios.get('https://wild-pear-cocoon-wig.cyclic.app//ss/get-users').then((res) => {
+            Axios.get('https://wild-pear-cocoon-wig.cyclic.app/ss/get-users').then((res) => {
                 if (res.data.isSuccess) {
                     setUsers(res.data.UsersData)
                     setIsDeleted(false)
@@ -40,7 +40,7 @@ function UserManagementScreen() {
 
     const handleDelete = (_id) => {
 
-        Axios.post('https://wild-pear-cocoon-wig.cyclic.app//ss/delete-user', {
+        Axios.post('https://wild-pear-cocoon-wig.cyclic.app/ss/delete-user', {
             Id: _id
         }).then((res) => {
             if (res.data.isSuccess) {

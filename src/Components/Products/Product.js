@@ -15,13 +15,13 @@ function Product(props) {
     const navigate = useNavigate();
 
     const handleCart = () => {
-        Axios.post('https://wild-pear-cocoon-wig.cyclic.app//ss/post-cart-item', {
+        Axios.post('https://wild-pear-cocoon-wig.cyclic.app/ss/post-cart-item', {
             ProductId: props.productId,
             FKUserId: user[0]._id
         }).then((res) => {
             if (res.data.isSuccess) {
                 alert(res.data.message)
-                Axios.post('https://wild-pear-cocoon-wig.cyclic.app//ss/get-cart-items', {
+                Axios.post('https://wild-pear-cocoon-wig.cyclic.app/ss/get-cart-items', {
                     Id: user[0]._id
                 }).then((result) => {
                     console.log(result.data)

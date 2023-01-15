@@ -11,14 +11,14 @@ function EditUser(props) {
 
     useEffect(() => {
 
-        Axios.get('https://wild-pear-cocoon-wig.cyclic.app//ss/get-roles').then((res) => {
+        Axios.get('https://wild-pear-cocoon-wig.cyclic.app/ss/get-roles').then((res) => {
             if (res.data.isSuccess) {
                 setRoles(res.data.Roles)
             }
         })
 
         if (props.currentUser !== 0) {
-            Axios.post('https://wild-pear-cocoon-wig.cyclic.app//ss/get-by-id', {
+            Axios.post('https://wild-pear-cocoon-wig.cyclic.app/ss/get-by-id', {
                 Id: props.currentUser
             }).then((res) => {
                 if (res.data.isSuccess) {
@@ -32,7 +32,7 @@ function EditUser(props) {
     }, [props.currentUser])
 
     const handleUpdate = () => {
-        Axios.post('https://wild-pear-cocoon-wig.cyclic.app//ss/update-user', {
+        Axios.post('https://wild-pear-cocoon-wig.cyclic.app/ss/update-user', {
 
             Id: props.currentUser,
             Username: username,

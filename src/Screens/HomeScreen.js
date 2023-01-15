@@ -12,7 +12,7 @@ function HomeScreen() {
 
     useLayoutEffect(() => {
         setLoading(true)
-        Axios.get('https://wild-pear-cocoon-wig.cyclic.app//ss/get-products').then((res) => {
+        Axios.get('https://wild-pear-cocoon-wig.cyclic.app/ss/get-products').then((res) => {
             if (res.data.isSuccess) {
                 setProducts(res.data.Products)
                 setLoading(false)

@@ -28,16 +28,16 @@ function MainRoute() {
 
     useEffect(() => {
 
-        Axios.get('https://wild-pear-cocoon-wig.cyclic.app//ss/login').then((res) => {
+        Axios.get('https://wild-pear-cocoon-wig.cyclic.app/ss/login').then((res) => {
             if (res.data.isSuccess) {
                 dispatch(login(res.data.UserData))
                 dispatch(setRole(res.data.role))
-                Axios.post('https://wild-pear-cocoon-wig.cyclic.app//ss/get-cart-items', {
+                Axios.post('https://wild-pear-cocoon-wig.cyclic.app/ss/get-cart-items', {
                     Id: res.data.UserData[0]._id
                 }).then((cartData) => {
                     dispatch(loadCart(cartData.data.CartItems))
                 })
-                Axios.post('https://wild-pear-cocoon-wig.cyclic.app//ss/get-orders', {
+                Axios.post('https://wild-pear-cocoon-wig.cyclic.app/ss/get-orders', {
                     Id: res.data.UserData[0]._id
                 }).then((orderData) => {
                     dispatch(loadorders(orderData.data.Orders))

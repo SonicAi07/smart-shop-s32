@@ -26,7 +26,7 @@ function ProductsScreen() {
 
     const handleSubmit = async () => {
 
-        let result = await Axios.post('https://wild-pear-cocoon-wig.cyclic.app//ss/post-product', {
+        let result = await Axios.post('https://wild-pear-cocoon-wig.cyclic.app/ss/post-product', {
             ProductName: prdName,
             ProductImage: prdImage,
             ProductType: prdType,

@@ -27,7 +27,7 @@ function Register() {
 
     useEffect(() => {
 
-        Axios.get('https://wild-pear-cocoon-wig.cyclic.app//ss/get-users').then((res) => setUsers(res.data.UsersData))
+        Axios.get('https://wild-pear-cocoon-wig.cyclic.app/ss/get-users').then((res) => setUsers(res.data.UsersData))
 
     }, [])
 
@@ -49,7 +49,7 @@ function Register() {
         return `
         <div style="border:1px solid black;width : 380px;background: #293243;padding: 10px; border-radius: 5px;">
         <div style="text-align: center;">
-            <img src="https://wild-pear-cocoon-wig.cyclic.app//Images/logo.png" alt="logo" />
+            <img src="https://wild-pear-cocoon-wig.cyclic.app/Images/logo.png" alt="logo" />
         </div>
         <div style="color: #fff;padding: 10px;">
             <p>Thanks For Registering to <b>Smart Shop</b>, Here is the One Time Password
@@ -73,7 +73,7 @@ function Register() {
     const handleRegister = () => {
 
         if (OTP.toString() === generatedOTP.toString()) {
-            Axios.post('https://wild-pear-cocoon-wig.cyclic.app//ss/register-user', {
+            Axios.post('https://wild-pear-cocoon-wig.cyclic.app/ss/register-user', {
                 Username: username,
                 Email: email,
                 Password: password
@@ -147,7 +147,7 @@ function Register() {
                 let otp = await GenerateOTP();
                 setGeneratedOTP(otp)
 
-                let mail = await Axios.post('https://wild-pear-cocoon-wig.cyclic.app//mail/send-mail-html', {
+                let mail = await Axios.post('https://wild-pear-cocoon-wig.cyclic.app/mail/send-mail-html', {
 
                     toMail: email,
                     toSubject: "One Time Password - Smart Shop",

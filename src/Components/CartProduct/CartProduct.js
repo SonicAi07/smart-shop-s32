@@ -13,7 +13,7 @@ function CartProduct(props) {
 
     const handleRemove = () => {
 
-        Axios.post('https://wild-pear-cocoon-wig.cyclic.app//ss/remove-cart-item', {
+        Axios.post('https://wild-pear-cocoon-wig.cyclic.app/ss/remove-cart-item', {
             CartId: props.cartId
         }).then((res) => {
             if (res.data.isSuccess) {

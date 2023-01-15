@@ -31,7 +31,7 @@ function ForgotPasswordValidation() {
         return `
         <div style="border:1px solid black;width : 380px;background: #293243;padding: 10px; border-radius: 5px;">
         <div style="text-align: center;">
-            <img src="https://wild-pear-cocoon-wig.cyclic.app//Images/logo.png" alt="logo" />
+            <img src="https://wild-pear-cocoon-wig.cyclic.app/Images/logo.png" alt="logo" />
         </div>
         <div style="color: #fff;padding: 10px;">
             <p>Your Request is Approved for Forgot Password. Here is the One Time Password <b
@@ -89,7 +89,7 @@ function ForgotPasswordValidation() {
 
     const handleCheck = async () => {
         setLoading(true)
-        let result = await Axios.post('https://wild-pear-cocoon-wig.cyclic.app//ss/check-email', {
+        let result = await Axios.post('https://wild-pear-cocoon-wig.cyclic.app/ss/check-email', {
             Email: email
         })
 
@@ -102,7 +102,7 @@ function ForgotPasswordValidation() {
 
         let OTP = await GenerateOTP()
 
-        let mail = await Axios.post('https://wild-pear-cocoon-wig.cyclic.app//mail/send-mail-html', {
+        let mail = await Axios.post('https://wild-pear-cocoon-wig.cyclic.app/mail/send-mail-html', {
 
             toMail: email,
             toSubject: "Smart Shop - Forgot Password Request",
@@ -144,7 +144,7 @@ function ForgotPasswordValidation() {
                 alert("Please Provide the Details Correctly")
             }
             else {
-                let result = await Axios.post('https://wild-pear-cocoon-wig.cyclic.app//ss/change-password', {
+                let result = await Axios.post('https://wild-pear-cocoon-wig.cyclic.app/ss/change-password', {
                     Password: password,
                     Email: email
                 })

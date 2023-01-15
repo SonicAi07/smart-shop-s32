@@ -46,19 +46,19 @@ function Login() {
                 alert("Please Enter the correct details..!")
             }
             else {
-                let result = await Axios.post('https://wild-pear-cocoon-wig.cyclic.app//ss/login', {
+                let result = await Axios.post('https://wild-pear-cocoon-wig.cyclic.app/ss/login', {
                     Username: username,
                     Password: password
                 })
 
                 if (result.data.isSuccess) {
                     alert(result.data.message)
-                    Axios.post('https://wild-pear-cocoon-wig.cyclic.app//ss/get-cart-items', {
+                    Axios.post('https://wild-pear-cocoon-wig.cyclic.app/ss/get-cart-items', {
                         Id: result.data.UserData[0]._id
                     }).then((result2) => {
                         dispatch(loadCart(result2.data.CartItems))
                     })
-                    Axios.post('https://wild-pear-cocoon-wig.cyclic.app//ss/get-orders', {
+                    Axios.post('https://wild-pear-cocoon-wig.cyclic.app/ss/get-orders', {
                         Id: result.data.UserData[0]._id
                     }).then((result2) => {
                         dispatch(loadorders(result2.data.Orders))
