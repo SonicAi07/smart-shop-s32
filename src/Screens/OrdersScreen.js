@@ -76,7 +76,7 @@ function OrdersScreen() {
                         }).then((cartData) => {
                             dispatch(loadCart(cartData.data.CartItems))
                         })
-                        Axios.post('https://wild-pear-cocoon-wig.cyclic.app/ss//get-orders', {
+                        Axios.post('https://wild-pear-cocoon-wig.cyclic.app/ss/get-orders', {
                             Id: userData[0]._id
                         }).then((ordersResult) => {
                             dispatch(loadorders(ordersResult.data.Orders))
