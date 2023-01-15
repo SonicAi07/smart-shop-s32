@@ -1,0 +1,81 @@
+ProductName: Men Sneakers | Highlander
+ProductType: Men Sneakers
+ProductRating: 3.7
+ProductReview: 4.4k
+ProductPrice: 696
+
+ProductName: Men Sneakers | Roadster
+ProductType: Men Sneakers
+ProductRating: 4.1
+ProductReview: 5.2
+ProductPrice: 872
+
+ProductName: Men Colourblocked Sneakers | Puma
+ProductType: Men Sneaker
+ProductRating: 4.2
+ProductReview: 276
+ProductPrice: 2924
+
+ProductName: Men Striped Leather Sneakers | Roadster
+ProductType: Men Sneakers
+ProductRating: 3.7
+ProductReview: 834
+ProductPrice: 898
+
+==> Sweatshirts
+
+ProductName: Men Hooded Sweatshirt | Highlander
+ProductType: Sweateshirt
+ProductRating: 4.2
+ProductReview: 1.6k
+ProductPrice: 543
+
+
+ProductName: Solid Hooded Sweatshirt | HRX
+ProductType: Sweatshirt
+ProductRating: 4.2
+ProductReview: 2.1k
+ProductPrice: 1199
+
+
+ProductName: Men Colourblocked Sweatshirt | Campus Sutra
+ProductType: Sweatshirt
+ProductRating: 4.2
+ProductReview: 13.3k
+ProductPrice: 999
+
+
+ProductName: Solid Sweatshirt | Allen Solly
+ProductType: Sweatshirt
+ProductRating: 4.2	
+ProductReview: 768
+ProductPrice: 1734
+
+==> Kurtis for Women
+
+ProductName: Women Floral Embroidered | HERE&NOW
+ProductType: Kurtis for Women
+ProductRating: 4.5
+ProductReview: 1k
+ProductPrice: 659
+
+
+ProductName: Printed Anarkali Kurta | Sangria
+ProductType: Kurtis for Women
+ProductRating: 4.1
+ProductReview: 2.3k
+ProductPrice: 899
+
+
+ProductName: Women Printed Kurta | Thread & Button
+ProductType: Kurtis for Women
+ProductRating: 3.8
+ProductReview: 2k
+ProductPrice: 4162
+
+
+ProductName: Printed Straight Kurta | Anouk
+ProductType: Kurtis for Women
+ProductRating: 3.9
+ProductReview: 21.9k
+ProductPrice: 1629
