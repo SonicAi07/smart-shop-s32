@@ -160,12 +160,11 @@ function Header() {
                                     <p>Smart Shop is an Application Where You can Login and Order Something. Its a FullStack Application So If You Logged Off and then after sometime Logged In Once again the items you order to Added to cart will be still there...</p>
                                     <h2 className='py-2 font-bold'>Key Features</h2>
                                     <ul className='list-disc px-5'>
-                                        <li>Login With Session and Cookies</li>
-                                        <li>User Management</li>
                                         <li>Password Encryption with an Pattern</li>
                                         <li>Unique Username</li>
                                         <li>One Time Password While Registration and Forget Password</li>
                                         <li>Email Sending</li>
+                                        <li>User Management</li>
                                         <li>Responsive Desgin</li>
                                         <li>User Roles and Permissions</li>
                                     </ul>
